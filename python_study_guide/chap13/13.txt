@@ -1,0 +1,33 @@
+创建进程的两种方式
+1. OS fork 仅限于 UNIX LINUX and mac
+2. multiprocessing Process: Windows
+2.1 第一种创建进程的语法结构：
+Process(group=None,target,name,args,kwargs)
+
+参数说明：
+1. group：表示分组，实际上不使用，值默认为None即可
+2. target：表示子进程要执行的任务，支持函数名  必须要写
+3. name：表示子进程的名称
+4. args：表示调用函数的位置参数，以元组的形式进行传递
+5. kwargs：表示调用函数的关键字参数，以字典的形式进行传递
+
+
+创建进程的方式 
+name 当前进程实例别名，默认为Process-N 
+pid 当前进程对象的PID值
+is_alive() 进程是否执行完，没执行完结果为True，否则为False
+join(timeout) 等待结束或等待timeout秒
+start() 启动进程
+run() 如果没有指定target参数，则启动进程后，会调用父类中的run方法
+terminate() 强制终止进程
+
+
+Pool进程池
+apply_async(func,args,kwargs) 使用非阻塞方式调用函数func
+apply(func,args,kwargs) 使用阻塞方式调用函数func 
+close() 关闭进程池，不再接收新任务
+terminate() 不管任务是否完成，立即终止
+join() 阻塞主进程，必须在terminate()或close()之后使用
+
+
+

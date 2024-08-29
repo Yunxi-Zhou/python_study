@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Test1",
+        "value": 30,
+        "type": 100
+    },
+    {
+        "name": "Test2",
+        "value": 40,
+        "type": 90
+    },
+    {
+        "name": "Test3",
+        "value": 20,
+        "type": 75
+    }
+]

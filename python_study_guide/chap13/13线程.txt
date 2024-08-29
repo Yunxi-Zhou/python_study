@@ -1,0 +1,11 @@
+线程
+线程是CPU可调度的最小单位，被包含在进程中，是进程中实际的运作单位。
+一个进程可以拥有N多个线程并发执行，每个线程执行不同的任务。
+
+创建线程的方式
+t=Thread(group,target,name,args,kwargs)
+
+
+使用thread子类创建线程的操作步骤:
+1. 自定义类继承threading模块下的Thread类
+2. 实现run方法

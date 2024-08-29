@@ -1,0 +1,77 @@
+'''
+r 只读模式，指针在文件开头，如果文件不存在，抛出异常
+rb 只读模式打开二进制文件，如图片文件
+w 覆盖写模式，不存在创建，存在内容覆盖
+wb 覆盖写模式写入二进制，不存在创建，存在内容覆盖
+a 追加写功能，文件不存在创建，文件存在最后追加
++ 与w/r/a等一同使用，在原功能的基础上增加同时读写功能 
+'''
+'''
+file.read(size) 在文件中读取size个字符或字节，如果没有给定参数，则读取文件中的全部内容
+file.readline(size) 读取文件的一行数据，如果给定参数，则读取这一行中的size个字符或字节
+file.readlines() 从文件中读取所有内容，结果为列表类型
+file.write(s) 将字符串s写入文件
+file.writelines(lst) 将内容全部为字符串的列表s写入文件
+file.seek(offset) 改变当前文件操作指针的位置，英文占一个字节，中文gbk编码占两个字节，utf-8编码占三个字节
+'''
+
+'''
+文件基本操作
+with语句：上下文管理器，处理文件，无论是否异常，with执行完毕后关闭已打开的文件，auto
+
+with open(..) as file:
+    pass
+'''
+
+'''
+一维数据 列表，元组或者集合存储数据
+
+二维数据 Excel表格，在python中使用二维列表进行存储
+
+高维数据 Key-Value进行组织数据，在python中使用字典存储数据
+        内置json模块专用于处理JSON Javascript Object Notation 格式的数据
+
+json模块的常用函数
+json.dumps(obj) 将python数据类型转成JSON格式过程，编码过程
+json.loads(s) 将JSON格式字符串转成Python数据类型，解码过程
+json.dump(obj,file) 与dumps()功能相同，将转换结果存储到文件file中
+json.load(file) 与loads()功能相同，从文件file中读入数据
+
+'''
+
+'''
+os 
+
+getcwd() 获取当前的工作路径
+listdir(path) 获取path路径下的文件和目录信息，如果没有制定path，获取当前路径下的文件和目录信息
+mkdir(path) 在指定路径下创建目录（文件夹）
+makedirs(path) 创建多级目录
+
+'''
+
+'''
+文件与目录的相关操作
+
+rmdir(path) 删除path下的空目录
+removedir(path) 删除多级目录
+chdir(path) 把path设为当前目录
+walk(path) 遍历目录树，结果为元组，包含所有路径名，所有目录列表和文件列表
+remove(path) 删除path指定的文件
+rename(old,new) old --> new
+stat(path) 获取path指定的文件信息
+starfile(path) 启动path指定的文件
+
+'''
+
+'''
+
+abspath(path) 获取目录或文件的绝对路径
+exists(path) 判断目录或文件在磁盘上是否存在，结果为bool，如果存在，返回t，否则f
+join(path,name) 将目录与目录名或文件名进行拼接，相当于字符串的“+”操作
+splittext() 分别获取文件名和后缀名
+
+
+'''
+
+
+

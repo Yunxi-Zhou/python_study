@@ -1,0 +1,3 @@
+macOS
+pip3 install xxx 第三方模块下载
+Queue 

@@ -1,0 +1,13 @@
+Queue 队列
+
+FIFO 先进先出数据结构
+
+qsize() 获取当前队列包含的消息数量
+empty() 判断队列是否为空，为空结果为True，否则为False
+full() 判断队列是否满了，满结果为True，否则为False
+get(block=True) 获取队列中的一条消息，然后从队列中移除，block默认值为True
+get_nowait() 相当于get(block=False),消息队列为空时，抛出异常
+put(item,block=True) 将item消息放入队列，block默认为True
+put_nowait(item) 相当于put(item,block=False)
+
+
